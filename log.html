@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stylelog.css">
+  <title>Placement</title>
+  <link rel="icon" href="resources/logo.svg">
+</head>
+<body>
+  <div class="login-wrapper">
+    <form action="" class="form">
+      <h2>Welcome back!</h2>
+      <div class="input-group">
+        <input type="text" name="loginUser" id="email">
+        <label for="loginUser">User Name</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="loginPassword" id="password">
+        <label for="loginPassword">Password</label>
+      </div>
+      <input type="submit" value="Login" class="submit-btn" onclick="auth()">
+      <a href="#forgot-pw" class="forgot-pw">Forgot Password?</a>
+    </form>
+
+    <script>
+      function auth(){
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if(email=='username' && password=="password"){
+          window.location.assign("resources/Will_commence.html")
+          alert("Login Successfull");
+        }
+        else{
+          alert("Invalid Login Credentials");
+          return;
+        }
+      }
+    </script>
+
+
+  </div>
+</body>
+</html>
